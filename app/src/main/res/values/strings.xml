@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyApp</string>
+    <string name="textTitle">CALCULATOR</string>
+    <string name="editTextText1">Ingrese un valor: </string>
+
+
+</resources>
