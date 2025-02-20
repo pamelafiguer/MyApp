@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView tv1;
 
-    private Button btnSuma, btnRest, btnPor, btnDiv;
+
 
 
     @Override
@@ -93,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
 
         } else {
             Toast.makeText(this, "El segundo valor ingresado debe ser distinto a 0", Toast.LENGTH_SHORT).show();
-
         }
 
     }
