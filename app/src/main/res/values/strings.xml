@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">MyApp</string>
-    <string name="textTitle">CALCULATOR</string>
-    <string name="editTextText1">Ingrese un valor: </string>
-
+    <string name="textTitle">REGISTRO DE ALUMNOS</string>
+    <string name="editTextText1">Nombre</string>
+    <string name="editTextText2">Apellido</string>
+    <string name="editTextText3">Email</string>
+    <string name="textView2">MostrarDatos</string>
 
 </resources>

@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText et2;
 
+    private EditText et3;
+
     private TextView tv1;
 
 
@@ -38,63 +40,23 @@ public class MainActivity extends AppCompatActivity {
 
         et1 = (EditText) findViewById(R.id.editTextText1);
         et2 = (EditText) findViewById(R.id.editTextText2);
+        et3 = (EditText) findViewById(R.id.editTextText3);
         tv1 = (TextView) findViewById(R.id.textView2);
 
 
     }
 
-    public void suma(View vista) {
+    public void Mostrar(View vista) {
         String valor1 = et1.getText().toString();
         String valor2 = et2.getText().toString();
+        String valor3 = et3.getText().toString();
 
-        int num1 = Integer.parseInt(valor1);
-        int num2 = Integer.parseInt(valor2);
-        int total = num1 + num2;
-
-        String resultado = String.valueOf(total);
-        tv1.setText(resultado);
+        String datos = valor1 + " " + valor2 + " " + "\n" + valor3;
+        tv1.setText(datos);
     }
 
-    public void resta(View vista) {
-        String valor1 = et1.getText().toString();
-        String valor2 = et2.getText().toString();
 
-        int num1 = Integer.parseInt(valor1);
-        int num2 = Integer.parseInt(valor2);
-        int total = num1 - num2;
 
-        String resultado = String.valueOf(total);
-        tv1.setText(resultado);
-    }
 
-    public void multiplicacion(View vista) {
-        String valor1 = et1.getText().toString();
-        String valor2 = et2.getText().toString();
-
-        int num1 = Integer.parseInt(valor1);
-        int num2 = Integer.parseInt(valor2);
-        int total = num1 * num2;
-
-        String resultado = String.valueOf(total);
-        tv1.setText(resultado);
-    }
-
-    public void division(View vista) {
-        String valor1 = et1.getText().toString();
-        String valor2 = et2.getText().toString();
-
-        int num1 = Integer.parseInt(valor1);
-        int num2 = Integer.parseInt(valor2);
-
-        if (num2 != 0) {
-            int total = num1 / num2;
-            String resultado = String.valueOf(total);
-            tv1.setText(resultado);
-
-        } else {
-            Toast.makeText(this, "El segundo valor ingresado debe ser distinto a 0", Toast.LENGTH_SHORT).show();
-        }
-
-    }
 
 }
