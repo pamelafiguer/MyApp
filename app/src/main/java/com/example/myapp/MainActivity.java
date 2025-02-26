@@ -1,6 +1,9 @@
 package com.example.myapp;
 
 import android.app.AlertDialog;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView tv1;
 
+    Button play;
+
+    SoundPool sp;
+
+    int sonido_de_reproduccion;
 
 
 
@@ -43,17 +51,28 @@ public class MainActivity extends AppCompatActivity {
         et3 = (EditText) findViewById(R.id.editTextText3);
         tv1 = (TextView) findViewById(R.id.textView2);
 
+        play =(Button) findViewById(R.id.button_play_corto);
+        sp = new SoundPool(1, AudioManager.STREAM_MUSIC,1);
+        sonido_de_reproduccion = sp.load(this,R.raw.click,1);
+
 
     }
+
 
     public void Mostrar(View vista) {
         String valor1 = et1.getText().toString();
         String valor2 = et2.getText().toString();
         String valor3 = et3.getText().toString();
 
-        String datos = valor1 + " " + valor2 + " " + "\n" + valor3;
+        String datos = "Nombres: " + valor1 + "\n" + "Apellidos: " + valor2 + "\n" + " Email: " + valor3 +"\n" ;
         tv1.setText(datos);
+
+        MediaPlayer mp=MediaPlayer.create(this,R.raw.click);
+        mp.start();
     }
+
+
+
 
 
 
